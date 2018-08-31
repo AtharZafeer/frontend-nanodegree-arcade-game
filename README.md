@@ -1,6 +1,20 @@
-frontend-nanodegree-arcade-game
+#frontend-nanodegree-arcade-game
 ===============================
+* [Description](#Description)
+* [Instructions](#How to Play the game?)
+* [KNOWn issues](#KNOWn issues)
+* [Contributing](#Contributing)
+This is a project given by udacity in the frontEnd nanodegree program.
+##Description
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+In this game you have a Player and Enemies (Bugs). The goal of the player is to reach the water, without colliding into any one of the enemies. The player can move left, right, up and down. The enemies move in varying speeds on the paved block portion of the scene. Once a the player collides with an enemy, the game is reset and the player moves back to the start square. Once the player reaches the water the game is won. I have implemented only that as I had only little time. Might add more later on.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+##How to Play the game?
+    Left key should move the player to the left, right key to the right, up should move the player up and down should move the player down.
+    that is all the controls
+
+##KNOWn issues
+    There isn't any to my knowledge. If any browser is incompatible, do let me know.
+
+##Contributing
+    This a project for Udacity Front End Nano degree Scholarship. If you wish to contribute to this. Don't contribute to this. I am serious. Don't.
