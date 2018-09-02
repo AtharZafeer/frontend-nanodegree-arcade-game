@@ -15,9 +15,14 @@ In this game you have a Player and Enemies (Bugs). The goal of the player is to 
     that is all the controls
 
 ##issues
-    There isn't any to my knowledge. If any browser is incompatible, do let me know.
+    In mobile phones, if the OnScreen keys are pressed twice quickly, it zooms in or out.
 
 ##Contributing
     This a project for Udacity Front End Nano degree Scholarship. If you wish to contribute to this. Don't contribute to this. I am serious. Don't.
 ##Local_loading
-    The images folder must
+    The images folder must contain all the images associated and must have a relative path Images/(imagefiles).
+    The script folder must contain all the images associated and must have a relative path Images/(script).
+    The CSS folder must contain all the images associated and must have a relative path Images/style.css.
+    run index.html as it is the main file that runs the game.
+
+    
