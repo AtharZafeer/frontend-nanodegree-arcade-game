@@ -4,6 +4,7 @@
 * [Instructions](#Instructions)
 * [KNOWn issues](#issues)
 * [Contributing](#Contributing)
+* [Locally Loading the game] (#Local_loading)
 This is a project given by udacity in the frontEnd nanodegree program.
 ##Description
 
@@ -18,3 +19,5 @@ In this game you have a Player and Enemies (Bugs). The goal of the player is to 
 
 ##Contributing
     This a project for Udacity Front End Nano degree Scholarship. If you wish to contribute to this. Don't contribute to this. I am serious. Don't.
+##Local_loading
+    The images folder must

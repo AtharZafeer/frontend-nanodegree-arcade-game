@@ -22,11 +22,13 @@ var Engine = (function(global) {
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
-        lastTime;
-
+        lastTime,
+        keyDiv = doc.createElement('div');
+        keyDiv.innerHTML="<button id=\"up\">UP   </button><button id=\"left\">LEFT </button> <button id=\"right\">RIGHT</button><button id=\"down\">DOWN </button>";
     canvas.width = 510;
     canvas.height = 606;
-    doc.body.appendChild(canvas);
+   doc.body.appendChild(canvas);
+    doc.body.appendChild(keyDiv);
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.

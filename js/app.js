@@ -1,7 +1,7 @@
 //reset function
-const reset = function(){
-    this.x = 202;
-    this.y = 405;
+ function reset(obj){
+    obj.x = 202;
+    obj.y = 405;
 }
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
@@ -17,6 +17,7 @@ var Enemy = function(x, y, speed) {
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
+let wins=0;
 Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
@@ -30,19 +31,19 @@ Enemy.prototype.update = function(dt) {
         player.x + 80 > this.x &&
         player.y < this.y + 60 &&
         60 + player.y > this.y) {
-        player.x = 202;
-        player.y = 405;
+        reset(player);
+        
     };
 }
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.fillText("Score: " + wins, 40, 70);
 };
 
 let Player = function(x,y){         //player function
-    this.x = x = 202;
-    this.y= y = 405;
+    reset(this);
     this.sprite= 'images/char-boy.png';
     
 }
@@ -59,10 +60,10 @@ Player.prototype.render = function(){
 // a handleInput() method.
 Player.prototype.handleInput= function(keyPress){
     if(keyPress == "left" && this.x >0){
-        this.x-=102;
+        this.x-=105;
     }
     if(keyPress == "right" && this.x< 310){
-        this.x+=102;
+        this.x+=105;
     }
     if(keyPress == "up" && this.y > 0){
         this.y-=83;
@@ -71,9 +72,8 @@ Player.prototype.handleInput= function(keyPress){
         this.y+=83;
     } 
     if(this.y < 5){
-        //reset();
-        this.x = 202;
-        this.y = 405;
+        reset(this);
+        wins++;
     }
 }
 
@@ -99,6 +99,20 @@ document.addEventListener('keyup', function(e) {
         39: 'right',
         40: 'down'
     };
-
+    e.preventDefault();
     player.handleInput(allowedKeys[e.keyCode]);
+});
+//added support to play in mobile
+ //document.querySelector("div");
+
+ var keys=document.body.querySelector('div');
+ keys.addEventListener('click', function(e) {
+   
+    var allowedKeys = {
+        left: 'left',
+        up: 'up',
+        right: 'right',
+        down: 'down'
+    };
+    player.handleInput(allowedKeys[e.target.id]);
 });
