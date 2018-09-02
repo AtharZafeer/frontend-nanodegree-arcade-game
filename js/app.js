@@ -14,7 +14,21 @@ var Enemy = function(x, y, speed) {
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 };
-
+//this wikl add sounds
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 let wins=0;
@@ -33,6 +47,8 @@ Enemy.prototype.update = function(dt) {
         60 + player.y > this.y) {
         reset(player);
         (wins>0)?wins-- :wins;
+        mySound = new sound("audio/352041__robinhood76__06784-cartoon-admiration-wows-[AudioTrimmer.com].wav");
+        mySound.play();
         
     };
 }
@@ -75,6 +91,8 @@ Player.prototype.handleInput= function(keyPress){
     if(this.y < 5){
         reset(this);
         wins++;
+        mySound = new sound("audio/211566__ballistiq85__laugh-1-[AudioTrimmer.com].wav");
+        mySound.play();
     }
 }
 
