@@ -32,6 +32,7 @@ Enemy.prototype.update = function(dt) {
         player.y < this.y + 60 &&
         60 + player.y > this.y) {
         reset(player);
+        (wins>0)?wins-- :wins;
         
     };
 }
